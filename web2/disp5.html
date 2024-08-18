@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> 
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/57faba85b1.js" crossorigin="anonymous"></script>
+    <title>TechSpot</title>
+</head>
+
+    <header class="bg-light p-3">    
+            <div class="container d-flex justify-content-between align-items-center">
+            <img src="img/logo2.png" class="logo" alt="TechSpot Logo">  
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="http://localhost/web2/index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link bubble dropdown-toggle" href="#" id="catalogoDropdown" role="button">
+                                    Catálogo
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="catalogoDropdown">
+                                    
+                                    <li><a class="dropdown-item" href="http://localhost/web2/cat-impresoras.html">Impresoras</a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/web2/cat-tablet.html">Tablets</a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/web2/cat-kits.html">Kits punto de Venta</a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/web2/cat-disp.html">Dispositivos Moviles</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link bubble" href="http://localhost/web2/login.html">Carrito</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="http://localhost/web2/login.php">Inicio Sesión</a>
+                                
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <nav id="carrito" class="position-relative">
+                                <i class="fa-solid fa-cart-shopping">
+                                    <div class="buy-card">
+                                        <ul class="nav-card">
+                                            <li>Visualización</li>
+                                            <li>Nombre</li>
+                                            <li>Precio</li>
+                                            <li>Cantidad</li>
+                                            <li></li>
+                                        </ul>
+                                        <div class="lista_de_productos">
+                                            
+                                        </div>
+                                        <button id="vaciar_carrito">Vaciar Carrito</button>
+                                    </div>
+                                </i>
+                            </nav>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+<body> 
+    <main>
+        <div class="container-title">
+            <h1 class="mb-4">Zebra TC21 SE4710</h1>
+        </div>
+        <div class="grid" id="lista-productos">
+            <div class="producto-imagen">
+                <img src="img/zebra.jpg" alt="Zebra TC21 SE4710" class="producto-imagen">
+            </div>
+            <div class="info2">
+                <h3 class="info3">Zebra TC21 SE4710</h3> 
+                 <div class="descripcion">
+                    <h4 class="info3">Características:</h4>
+                    <p><strong>Descripción</strong></p>
+
+                    <p><strong>Atributos destacados</strong></p>
+                    <ul>
+                        <li><strong>Tipo de Producto:</strong> Terminal de Mano</li>
+                        <li><strong>Memoria Flash:</strong> 32GB</li>
+                        <li><strong>Resolución de la Pantalla:</strong> 1280 x 720</li>
+                        <li><strong>Memoria Estándar:</strong> 3GB</li>
+                        <li><strong>Sistema Operativo:</strong> Android 10</li>
+                        <li><strong>Tecnología de Conectividad:</strong> Inalámbrico</li>
+                        <li><strong>Formato:</strong> Tamaño teléfono</li>
+                        <li><strong>Velocidad de Procesador:</strong> 2.20GHz</li>
+                        <li><strong>Tipo de Procesador:</strong> Snapdragon</li>
+                        <li><strong>Tamaño de Pantalla:</strong> 12.7cm (5")</li>
+                        <li><strong>Nombre de Marca:</strong> Zebra</li>
+                        <li><strong>Modo de Pantalla:</strong> HD</li>
+                        <li><strong>Tarjeta de memoria admitida:</strong> microSD</li>
+                        <li><strong>Modelo de Procesador:</strong> 660</li>
+                        <li><strong>Núcleo del Procesador:</strong> Octa-Core (8 núcleos)</li>
+                        <li><strong>Pantalla Táctil:</strong> Sí</li>
+                        <li><strong>Batería incluida:</strong> Sí</li>
+                        <li><strong>Fabricante de Procesador:</strong> Qualcomm</li>
+                        <li><strong>Bluetooth:</strong> Sí</li>
+                        <li><strong>LAN inalámbrica:</strong> Sí</li>
+                        <li><strong>Estándar LAN sin Cable:</strong> IEEE 802.11a/b/g/n/d/h/i/k/r</li>
+                        <li><strong>Estándar Bluetooth:</strong> Bluetooth 5.0 + LE</li>
+                        <li><strong>Tipo de sensor de imagen:</strong> Imager</li>
+                        <li><strong>GPS:</strong> Sí</li>
+                        <li><strong>Tecnología Móvil de Conectividad de Datos:</strong> LTE, UMTS</li>
+                        <li><strong>Redes Móviles Compatibles:</strong> GSM</li>
+                        <li><strong>Cámara Trasera:</strong> Sí</li>
+                        <li><strong>Cámara Frontal:</strong> Sí</li>
+                        <li><strong>Comunicación de Campo Cercano (NFC):</strong> Sí</li>
+                        <li><strong>Grado de protección IP:</strong> IP67</li>
+                        <li><strong>Robusto:</strong> Sí</li>
+                        <li><strong>Google Mobile Services (GMS):</strong> Sí</li>
+                        <li><strong>Modelo del motor de escaneo:</strong> SE4710</li>
+                        <li><strong>Capacidad de escaneo:</strong> 2D, 1D</li>
+                    </ul>
+                    
+                    <p><strong>Características Físicas</strong></p>
+                    <ul>
+                        <li><strong>Peso (Aproximado):</strong> 236g</li>
+                        <li><strong>Altura:</strong> 158mm</li>
+                        <li><strong>Anchura:</strong> 79mm</li>
+                        <li><strong>Profundidad:</strong> 17.3mm</li>
+                    </ul>
+                    
+                    <p><strong>Cámara</strong></p>
+                    <ul>
+                        <li><strong>Cámara Trasera:</strong> Sí</li>
+                        <li><strong>Resolución de Cámara Posterior:</strong> 13 Megapíxel</li>
+                        <li><strong>Cámara Frontal:</strong> Sí</li>
+                        <li><strong>Resolución de Cámara Frontal:</strong> 5 Megapíxel</li>
+                    </ul>
+                    
+                    <p><strong>Información General</strong></p>
+                    <ul>
+                        <li><strong>Tipo de Producto:</strong> Terminal de Mano</li>
+                        <li><strong>Código de Fabricante:</strong> TC210K01A222A6</li>
+                        <li><strong>Dirección Web de Fabricante:</strong> <a href="http://www.zebra.com">http://www.zebra.com</a></li>
+                        <li><strong>Fabricante:</strong> Zebra Technologies Corporation</li>
+                        <li><strong>Modelo de Producto:</strong> TC21</li>
+                        <li><strong>Nombre de Producto:</strong> TC21 Touch Computer</li>
+                        <li><strong>Nombre de Marca:</strong> Zebra</li>
+                    </ul>
+                    
+                    <p><strong>Información Técnica</strong></p>
+                    <ul>
+                        <li><strong>Tecnología de Conectividad:</strong> Inalámbrico</li>
+                        <li><strong>Características:</strong> Cristal Gorilla</li>
+                        <li><strong>Tipo de Sensor:</strong> Proximidad, Sensor de Luz, Sensor de movimiento</li>
+                        <li><strong>Tipo de sensor de imagen:</strong> Imager</li>
+                        <li><strong>Multi-SIM Soportada:</strong> No</li>
+                        <li><strong>Número de Tarjetas SIM Soportadas:</strong> 1</li>
+                        <li><strong>Tamaño de SIM Soportado:</strong> Nano</li>
+                        <li><strong>Carga Inalámbrica:</strong> Sí</li>
+                        <li><strong>Google Mobile Services (GMS):</strong> Sí</li>
+                        <li><strong>Modelo del motor de escaneo:</strong> SE4710</li>
+                     
+                    
+
+                </div>
+                <p class="descuento">$350.000</p> 
+                
+                <button class="agregar-carrito" data-id="5">Agregar al Carrito</button>
+                <button class="volver" onclick="window.location.href='http://localhost/web2/cat-disp.html'">REGRESAR</button>
+                
+            </div>
+        </div>
+    </main>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="http://localhost/web2/script.js"></script>
+    <script src="script.js"></script>
+        
+    </main>
+</body>
+<footer class="bg-light py-3">
+    <div class="footer-content"></div>
+      <img src="img/WebPay3.png" alt="WebPay3" class="footer-image">
+    </div>
+    <div class="container footer">
+      <p>&copy; 2024 TechSpot. Todos los derechos reservados.</p>
+    </div>    
+</footer>
+</html>

@@ -1,0 +1,522 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    
+}
+
+main {
+    margin-top: 108px; /* Ajusta este valor según sea necesario background-color: #e0e0e0; */
+    background-image: url("http://localhost/web2/img/fondo.jpg");
+    
+}
+
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-size: 62.5%;
+    
+    ; /* Color de fondo gris para toda la página background-color: #e0e0e0*/
+  }
+
+body {
+    margin: 0; /* Elimina el margen predeterminado del body */
+    padding: 0;
+        
+}
+
+header {
+    height: 110px; /* Ajusta el valor según tus necesidades */
+    padding: 10px; /* Ajusta los valores según tus necesidades */
+  }
+.container {
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 0 20px; /* Espacio a los lados del contenedor */
+    max-width: auto; /* Ajusta el tamaño máximo del contenedor */
+}
+
+/*----------------producto destacado-------------------*/
+.highlight-title {
+    color: #cb4335;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 10px; /* Ajusta este valor para mover el texto más abajo */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; /* Transiciones para efectos de hover */
+}
+.highlight-title:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(45deg, rgba(150, 150, 150, 0.7), rgba(100, 100, 100, 0.3));
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.descuento {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #cb4335;
+}
+
+.btn-primary {
+    background-color: #cb4335;
+    border-color: #cb4335;
+}
+
+.btn-primary:hover {
+    background-color: #a62827;
+    border-color: #a62827;
+}
+
+
+.img-fluid {
+    
+    max-width: 100%;
+    height: auto;
+}
+
+.mb-4 {
+    font-weight: bold;
+    background-image: url("http://localhost/web2/img/fondo.jpg");
+    margin-top: 5px;  /* Reduce el margen superior a 5px */
+    background-color: #e0e0e0;
+    text-align: center;
+    font-size: 25px;
+    border-bottom: 4px solid #1e1e65;
+    padding: 10px 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #000000;
+  }
+ /*----------------footer-------------------*/
+footer {
+    padding: 10px; /* Ajusta el padding según sea necesario */
+    text-align: center; /* Centra el texto dentro del footer */
+    width: auto; /* Asegura que el footer ocupe todo el ancho del contenedor */
+    position: relative; /* Asegura que el footer esté posicionado correctamente */
+    box-shadow: none; /* Elimina cualquier sombra que pudiera alterar la apariencia */
+}
+
+.container footer {
+    display: flex; /* Hace que el footer sea un contenedor flex */
+    flex-direction: column; /* Apila los elementos verticalmente */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    background-image: none; /* Elimina cualquier imagen de fondo */
+    text-align: center; /* Centra el texto horizontalmente */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    width: auto; /* Ocupa todo el ancho del footer */
+}
+
+.footer-image {
+    width: 300px !important;
+    height: auto;
+    margin: 0 auto; /* Asegura que la imagen esté centrada */
+     /* Convierte la imagen en un elemento de bloque para centrarla */
+}
+/*----------------header-------------------*/
+header {
+    position: fixed;
+    top: 0; /* Fija el header en la parte superior */
+    right: 0; /* Alinea el header al borde derecho */
+    left: 0; /* Extiende el header al borde izquierdo */
+    background-color: #cb4335; /* Cambia el color de fondo del header aquí */
+    border-bottom: 4px solid #1e1e65;
+    padding: 10px 0; /* Ajusta el padding según sea necesario */
+    z-index: 1000; /* Asegura que el header esté sobre otros elementos */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Agrega una sombra sutil al header */
+    color: #fff; /* Cambia el color del texto si es necesario para que contraste con el fondo */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Alinea el logo a la izquierda y el menú a la derecha */
+    align-items: center; /* Alinea verticalmente los elementos */
+    padding: 0 20px; /* Agrega padding para que los elementos no estén pegados al borde */
+}
+/*----------------logo-------------------*/
+
+.logo {
+    background-color: #fff;
+    width: 100px; /* Reduce el ancho del logo */
+    height: auto; /* Mantén la proporción de la imagen */
+    padding: 3px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 3px solid #cb4335;
+    max-width: 150px; /* Mantén el máximo ancho para evitar distorsión */
+    display: block;
+    margin: 0;
+  }
+
+.logo::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px; 
+    height: auto; 
+    background-color: #e0e0e0;
+    z-index: -1; 
+}
+
+/*----------------menú desplegable-------------------*/
+.dropdown-menu {
+    display: none; /* Oculta el menú por defecto */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 0.125rem;
+}
+
+.container.d-flex.justify-content-between.align-items-center {
+    height: 80px; /* Ajusta el valor según tus necesidades */
+    margin-top: 0px;
+}
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block; /* Muestra el menú cuando se pasa el ratón sobre el contenedor */
+    width: 150px;    
+}
+
+.dropdown-menu .dropdown-item {
+    white-space: nowrap; /* Evita que los ítems del menú se corten */
+}
+
+.navbar-nav .nav-link {
+    position: relative;
+    padding: 30px 30px;
+     align-items: center; /* Alinea los elementos verticalmente al centro */
+    justify-content: space-between;
+    font-size: 15px; /* Ajusta el tamaño de fuente según tus necesidades */
+    padding: 5px 5px; /* Ajusta el padding según tus necesidades */
+    font-weight: bold; /* Negrita */
+    color: #333; /* Color del texto */
+    height: 10px;
+}
+
+.navbar-nav .nav-link.bubble::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%; /* Tamaño de la burbuja */
+    height: 100%; /* Tamaño de la burbuja */
+    background-color: rgba(255, 255, 255, 0.3); /* Fondo de la burbuja, ligeramente blanco */
+    border: 2px solid #cb4335; /* Borde de la burbuja */
+    border-radius: 50%; /* Hace que la burbuja sea redonda */
+    z-index: -1; /* Coloca la burbuja detrás del texto */
+    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.3); /* Añade un efecto de sombra para dar un aspecto de burbuja */
+    transition: box-shadow 0.3s ease; /* Transición suave para el hover */
+}
+
+.navbar-nav .nav-link.bubble:hover::before {
+    
+    box-shadow: 0
+}
+/*----------------carrito-------------------*/
+.agregar-carrito {
+    font-size: 1.2em; /* Aumenta el tamaño de la fuente */
+    padding: 15px 30px; /* Aumenta el padding */
+    border-radius: 8px;
+    background-color: #fff; /* Agrega un borde redondeado */
+}
+#carrito {
+    position: fixed;
+    top: 10px; /* Ajusta esta posición según la altura de tu header */
+    right: 20px; /* Posición del carrito desde el borde derecho */
+    z-index: 2000;
+    margin-top: 20px; /* Espacio adicional arriba del carrito */
+    border: 2px solid #1e1e65; /* Borde rojo alrededor del carrito */
+    border-radius: 10px; 
+    background-image: url("http://localhost/web2/img/fondo.jpg");/* Bordes redondeados para el carrito */
+    padding: 10px; /* Espacio interno dentro del carrito */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para un efecto de elevación */
+}
+
+#vaciar_carrito {
+    font-size: 0.9rem; /* Tamaño de fuente más pequeño */
+    padding: 0.5rem 1rem; /* Ajusta el padding para que el botón se vea bien */
+    background-color: #1e1e65; /* Color de fondo del botón */
+    color: #fff; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    margin-top: 10px; /* Espacio adicional arriba del botón */
+}
+
+#vaciar_carrito:hover {
+    background-color: #bdca5c; /* Color de fondo al pasar el ratón */
+    color: #000000;
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+}
+
+.container-title {
+    text-align: center; 
+    background-color: #fff;/* Centra el contenido del contenedor */
+}
+
+
+.buy-card {
+    display: none; /* Inicialmente oculto */
+    position: absolute;
+    top: 100%; /* Muestra el contenido del carrito debajo del ícono */
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.buy-card > button {
+    display: block;
+    width: 90%;
+    padding: 1rem;
+    margin: 10px auto;
+    background-color: transparent;
+    border: 2px solid #fff; /* Borde alrededor del botón */
+    color: #494848;
+    cursor: pointer;
+}
+
+.buy-card > button:hover {
+    border-color: #faf8f8;
+    background-color: #fff;
+    transition: all .4s;
+}
+
+#carrito:hover .buy-card {
+    background-color: #fff;
+    display: block;
+}
+
+#carrito:hover .buy-card > button:hover {
+    
+    border: solid thin #faf8f8;
+    transition: all .4s;
+}
+/*Acomodar los elementos de nuestro carrito de compras*/
+.lista_de_productos div {
+    display: none;
+    text-align: center;
+    padding: 10px 0 0 0;
+    border-top: solid thin rgb(252, 251, 251);
+}
+
+.container nav i:hover .buy-card > .lista_de_productos div {
+    display: flex;
+}
+
+.lista_de_productos img {
+    width: 100px;
+}
+
+.lista_de_productos p {
+    width: 300px;
+    font-size: 1.3rem;
+}
+
+.lista_de_productos p:nth-child(4) {
+    padding-left: 40px;
+}
+
+.lista_de_productos p:last-child span {
+    background-color: red;
+    border-radius: 50%;
+    padding: 5px 10px;
+    color: #fff;
+}
+
+/*Acomodar elementos en carrito*/
+.contenedor-productos {
+    display: none;
+    text-align: center;
+    padding: 10px 0 0 0;
+    border-top: solid thin rgb(248, 248, 248);
+}
+
+.container nav i:hover .buy-card > .contenedor-productos  {
+    display: flex;
+}
+
+.contenedor-productos img{
+    width: 100px;
+}
+
+.contenedor-productos p {
+    width: 300px;
+    font-size: 1.3rem;
+}
+
+.contenedor-productos :nth-child(4) {
+    padding-left: 40px;
+}
+
+.contenedor-productos p:last-child span {
+    background-color: red;
+    border-radius: 50%;
+    padding: 5px 10px;
+    color: #fff;
+}
+
+.container nav {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px;
+    background-color: #e0e0e0;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.nav-card {
+    
+    display: none;
+}
+
+.container nav button {
+    
+    display: none;
+}
+
+.nav-card li {
+    list-style: none;
+    font-size: 1.2rem; /* Aumenta el tamaño de la fuente */
+    font-weight: bold; /* Pone el texto en negrita */
+    padding: 8px 0; /* Espacio alrededor del texto */
+    border-bottom: 1px solid #fff; /* Borde para separar los elementos */
+}
+
+.nav-card li:last-child {
+    border-bottom: none; /* Elimina el borde para el último elemento */
+}
+
+
+.container nav i:hover > .buy-card {
+    width: 400px;
+    height: auto;
+    position: absolute;
+    right: 0;
+    background-color: #e1e1e1;
+}
+
+.container nav i:hover .nav-card {
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px 0 10px;
+    border-bottom: solid thin #e1e1e1;
+}
+
+.container nav i:hover .buy-card > button {
+    display: block;
+    width: 90%;
+    padding: 1rem;
+    margin: 10px auto;
+    background-color: transparent;
+    border: solid thin #e1e1e1;
+    color: #494848;
+    cursor: pointer;
+}
+
+.container nav i:hover .buy-card > button:hover {
+    border: solid thin #e1e1e1;
+    transition: all .4s;
+}
+
+.container nav i {
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    color: #222;
+}
+
+.grid {
+    display: grid;
+    max-width: 1100px;
+    justify-content: center;
+    margin: auto;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px,280px));
+    padding-bottom: 50px;
+}
+
+.items {
+    background-color: #fff;
+    border: solid thin #808080;
+    background-image: url("http://localhost/web2/img/fondo.jpg");
+}
+
+.items img {
+    width: 100%;
+    height: 170px;
+}
+
+.info {
+    padding: 15px;
+}
+
+.info h3 {
+    font-size: 1.6rem;
+}
+
+.info p {
+    font-size: 1.5rem;
+}
+
+.precio {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bolder;
+}
+
+.precio p {
+    font-size: 1.8rem;
+}
+
+.info h3,
+.info p {
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.precio p:first-child {
+    text-decoration: line-through;
+}
+
+.info button {
+    padding: 1rem;
+    width: 100%;
+    background-color: #1e1e65; /* Cambiado al nuevo color */
+    border: none;
+    outline: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.info button:hover {
+    background-color: #bdca5c;
+    color: #080808;
+    border-radius: 5px;
+    transition: all .3s;
+}
+
+

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> 
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/57faba85b1.js" crossorigin="anonymous"></script>
+    <title>TechSpot</title>
+</head>
+
+    <header class="bg-light p-3">    
+            <div class="container d-flex justify-content-between align-items-center">
+            <img src="img/logo2.png" class="logo" alt="TechSpot Logo">  
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="http://localhost/web2/index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link bubble dropdown-toggle" href="#" id="catalogoDropdown" role="button">
+                                    Catálogo
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="catalogoDropdown">
+                                    <li><a class="dropdown-item" href="http://localhost/web2/productos.html" role="menuitem">Todos los Productos</a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/web2/cat-impresoras.html" role="menuitem">Impresoras</a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/web2/cat-tablet.html" role="menuitem">Tablets</a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/web2/cat-kits.html" role="menuitem">Kits punto de Venta</a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/web2/cat-disp.html" role="menuitem">Dispositivos Moviles</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link bubble" href="http://localhost/web2/login.html">Carrito</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="http://localhost/web2/login.php">Inicio Sesión</a>
+                                
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <nav id="carrito" class="position-relative">
+                                <i class="fa-solid fa-cart-shopping">
+                                    <div class="buy-card">
+                                        <ul class="nav-card">
+                                            <li>Visualización</li>
+                                            <li>Nombre</li>
+                                            <li>Precio</li>
+                                            <li>Cantidad</li>
+                                            <li></li>
+                                        </ul>
+                                        <div class="lista_de_productos">
+                                            
+                                        </div>
+                                        <button id="vaciar_carrito">Vaciar Carrito</button>
+                                    </div>
+                                </i>
+                            </nav>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+<body> 
+    <Main>
+    <div class="container-title">
+        <h1 class="mb-4">Tablets</h1>
+    </div>
+    <div class="grid" id="lista-productos">
+        <div class="items">
+            <img src="img/tablet.jpg" alt="Tablet Huawei 10 Pulgadas">
+            <div class="info">
+                <h3>Tablet Huawei 10 Pulgadas</h3>
+                <p>Modelo T 10</p>
+                <div class="descuento">
+                    <p>$190.000</p>
+                </div>
+                <button class="detalles" data-id="2" onclick="window.location.href='tablet2.html';">Ver detalles</button>
+                <button class="agregar-carrito" data-id="2">Agregar al Carrito</button>
+            </div>
+        </div>
+        <div class="items">
+            <img src="img/tablet.robusta.jpg" alt="Tablet Robusta Urovo">
+            <div class="info">
+                <h3>Tablet Robusta Urovo</h3>
+                <p>P8100</p>
+                <div class="descuento">
+                    <p>$649.000</p>
+                    </div>
+                <button class="detalles" data-id="12" onclick="window.location.href='tablet12.html';">Ver detalles</button>
+                <button class="agregar-carrito" data-id="12">Agregar al Carrito</button>
+            </div>
+        </div>
+        <div class="items">
+            <img src="img/tablet.lenovo.jpg" alt="Tablet Lenovo Tab M8">
+            <div class="info">
+                <h3>Tablet Lenovo</h3>
+                <p>Tab M8</p>
+                <div class="descuento">
+                    <p>$150.000</p>
+                    </div>
+                <button class="detalles" data-id="13" onclick="window.location.href='tablet13.html';">Ver detalles</button>
+                <button class="agregar-carrito" data-id="13">Agregar al Carrito</button>
+            </div>
+        </div>
+    </div>
+
+       
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="http://localhost/web2/script.js"></script>
+    <script src="script.js"></script>
+
+</Main>
+</body>
+<footer class="bg-light py-3">
+    <div class="footer-content"></div>
+      <img src="img/WebPay3.png" alt="WebPay3" class="footer-image">
+    </div>
+    <div class="container footer">
+      <p>&copy; 2024 TechSpot. Todos los derechos reservados.</p>
+    </div>    
+</footer>
+</html>
+
