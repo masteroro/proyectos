@@ -24,9 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.querySelector('.form-login').addEventListener('submit', function(event) {
   event.preventDefault();
-  // Aquí deberías hacer la llamada AJAX al servidor para verificar las credenciales
-  // Por simplicidad, vamos a asumir que la respuesta del servidor es exitosa.
-
+ 
   // Si el login es exitoso:
   alert('Iniciaste sesión correctamente');
   window.location.href = 'http://localhost/web2/index.html';

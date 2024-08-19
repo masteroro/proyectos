@@ -8,12 +8,16 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/57faba85b1.js" crossorigin="anonymous"></script>
+    </script>
+    <!-- Start of HubSpot Embed Code -->
     <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/7768644.js"></script>
-    <title>Carrito de Compras</title>
+    <!-- End of HubSpot Embed Code -->
+    <title>TechSpot</title>
 </head>
-<body>
+
     <header class="bg-light p-3">    
-        <div class="container d-flex justify-content-between align-items-center">
+
+            <div class="container d-flex justify-content-between align-items-center">
             <img src="img/logo2.png" class="logo" alt="TechSpot Logo">  
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container">
@@ -32,17 +36,20 @@
                                     Catálogo
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="catalogoDropdown">
+                                    
                                     <li><a class="dropdown-item" href="http://localhost/web2/cat-impresoras.html">Impresoras</a></li>
                                     <li><a class="dropdown-item" href="http://localhost/web2/cat-tablet.html">Tablets</a></li>
                                     <li><a class="dropdown-item" href="http://localhost/web2/cat-kits.html">Kits punto de Venta</a></li>
                                     <li><a class="dropdown-item" href="http://localhost/web2/cat-disp.html">Dispositivos Moviles</a></li>
                                 </ul>
+                                
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link bubble" href="http://localhost/web2/carrito.htm">Carrito</a>
+                                <a class="nav-link bubble" href="http://localhost/web2/carrito.html">Carrito</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="http://localhost/web2/login.php">Inicio Sesión</a>
+                                
                             </li>
                             <li class="d-flex justify-content-end">
                                 <form class="search-form" action="buscar.html" method="get">
@@ -50,52 +57,53 @@
                                     <button class="btn btn-outline-success" type="submit">Buscar</button>
                                 </form>
                             </li>
+                            
+                            
                         </ul>
                     </div>
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <nav id="carrito" class="position-relative">
-                                <i class="fa-solid fa-cart-shopping">
-                                    <div class="buy-card">
-                                        <ul class="nav-card">
-                                            <li>Visualización</li>
-                                            <li>Nombre</li>
-                                            <li>Precio</li>
-                                            <li>Cantidad</li>
-                                            <li></li>
-                                        </ul>
-                                        <div class="lista_de_productos">
-                                            <!-- Aquí se mostrarán los productos del carrito -->
-                                        </div>
-                                        <button id="vaciar_carrito">Vaciar Carrito</button>
-                                    </div>
-                                </i>
-                            </nav>
-                        </li>
-                    </ul>
+                    
                 </div>
             </nav>
         </div>
     </header>
-
-    <Main>
-        <h1 class="mb-4">Carrito de Compras</h1>
+<body>
+<main>
+    <div class="container-title">
+        <h1 class="mb-4"> Métodos de Pago</h1>
+    </div>
+    <div class="containerpago">
         
-            <div class="grid2" id="vista-productos">
-                           <!-- Aquí se añadirán los productos del carrito dinámicamente -->
-            </div>
-            
-            <div class="text-end mt-4">
-                <h3>Total: <span id="total-precio">$0.00</span></h3>
-                <button class="btn btn-primary" id="proceder-compra" onclick="location.href='http://localhost/web2/pago.html'">Proceder con la Compra</button>
-            </div>
+        
+        <div class="payment-method">
+            <h2>PayPal</h2>
+            <a href="https://www.paypal.com" target="_blank">
+                <img src="img/paypal.png" alt="PayPal">
+                Pagar con PayPal
+            </a>
         </div>
-    </Main>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="http://localhost/web2/script.js"></script>
-        <script src="script.js"></script>
+        
+        <div class="payment-method">
+            <h2>Tarjetas de Crédito</h2>
+            <a href="https://www.visa.com" target="_blank">
+                <img src="img/visa.png" alt="Visa">
+                Pagar con Visa
+            </a>
+            <a href="https://www.mastercard.com" target="_blank">
+                <img src="img/mastercard.png" alt="MasterCard">
+                Pagar con MasterCard
+            </a>
+        </div>
+        
+        <div class="payment-method"> 
+            <h2>Redcompra</h2>           
+            <a href="https://www.mastercard.com" target="_blank">
+                <img src="img/red-compra-logo.png" alt="Redcompra">
+                Pagar con Redcompra
+            </a>
+            
+        </div>
+    </div>
+</main>
 </body>
 <footer class="bg-light py-3">
     <div class="footer-content"></div>

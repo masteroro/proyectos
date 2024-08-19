@@ -2,31 +2,40 @@
 const carrito = document.getElementById("carrito"),
       listaproductos = document.getElementById("lista-productos"),
       contenedorCarrito = document.querySelector('.buy-card .lista_de_productos'),
-      vaciarCarritoBtn = document.querySelector('#vaciar_carrito');
+      vaciarCarritoBtn = document.querySelector('#vaciar_carrito'),
       baseURL = "http://localhost/web2/";
 
 let articulosCarrito = [];
 
 // Registrar eventos
-registrarEventsListeners();
+document.addEventListener('DOMContentLoaded', function() {
+    registrarEventsListeners();
+    cargarCarrito();
+});
 
 // Función para registrar eventos
 function registrarEventsListeners() {
-    // Cuando se hace click en "Agregar al carrito de compras"
-    listaproductos.addEventListener('click', agregarproducto);
+    if (listaproductos) {
+        listaproductos.addEventListener('click', agregarproducto);
+    } else {
+        console.error('Element "lista-productos" not found');
+    }
 
-    // Eliminar productos del carrito
-    carrito.addEventListener('click', eliminarproducto);
+    if (carrito) {
+        carrito.addEventListener('click', eliminarproducto);
+    } else {
+        console.error('Element "carrito" not found');
+    }
 
-    // Vaciar el carrito
-    vaciarCarritoBtn.addEventListener('click', e => {
-        articulosCarrito = [];
-        localStorage.removeItem('carrito'); // Limpiar carrito en localStorage
-        limpiarHTML();
-    });
-
-    // Cargar el carrito al inicio
-    document.addEventListener('DOMContentLoaded', cargarCarrito);
+    if (vaciarCarritoBtn) {
+        vaciarCarritoBtn.addEventListener('click', e => {
+            articulosCarrito = [];
+            localStorage.removeItem('carrito'); // Limpiar carrito en localStorage
+            limpiarHTML();
+        });
+    } else {
+        console.error('Element "vaciar_carrito" not found');
+    }
 }
 
 // Función para agregar producto al carrito
@@ -86,10 +95,25 @@ function leerInfo(producto) {
 
     carritoHTML();
 }
-
+//precio
+function formatNumber(number, decimals = 0) {
+    // Redondear el número a la cantidad deseada de decimales
+    const fixedNumber = number.toFixed(decimals);
+    
+    // Separar el número en parte entera y decimal
+    const [integerPart, decimalPart] = fixedNumber.split('.');
+    
+    // Agregar separadores de miles con puntos
+    const formattedIntegerPart = integerPart.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+    
+    // Devolver el número formateado con puntos como separadores de miles y coma decimal
+    return decimalPart ? `${formattedIntegerPart},${decimalPart}` : formattedIntegerPart;
+}
 // Función para mostrar el carrito en el HTML
 function carritoHTML() {
     limpiarHTML();
+    let totalPrecio = 0;
+
     // Recorre el carrito de compras y genera el HTML
     articulosCarrito.forEach(producto => {
         const fila = document.createElement('div');
@@ -103,7 +127,22 @@ function carritoHTML() {
         `;
 
         contenedorCarrito.appendChild(fila);
+        const precioNumero = parseFloat(producto.precio.replace('$', '').replace('.', ''));
+        totalPrecio += precioNumero * producto.cantidad;
     });
+
+    // Actualizar el total del carrito en el HTML
+    const totalPrecioElement = document.getElementById('total-precio');
+    if (totalPrecioElement) {
+        totalPrecioElement.innerText = `$${formatNumber(totalPrecio)}`;
+    } else {
+        console.error('Elemento "total-precio" no encontrado');
+    }
+
+    // Copiar el contenido de lista_de_productos a vista-productos
+    const vistaProductos = document.getElementById('vista-productos');
+    vistaProductos.innerHTML = contenedorCarrito.innerHTML;
+
 }
 
 // Función para limpiar el HTML del carrito

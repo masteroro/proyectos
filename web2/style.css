@@ -5,7 +5,82 @@
     font-family: sans-serif;
     
 }
+/*----------------boton buscar-------------------*/
+.search-form {
+    display: flex;
+    justify-content: flex-end; /* Alinea el formulario a la derecha */
+    margin: 0; /* Elimina el margen del formulario */
+}
 
+.search-form input[type="search"] {
+    border-radius: 0; /* Sin bordes redondeados en el input */
+    border: 1px solid #ced4da; /* Borde gris claro */
+    margin-right: 0.5rem; /* Espacio entre el campo de búsqueda y el botón */
+    width: 150px; /* Ajusta el ancho según sea necesario */
+}
+
+.search-form button {
+    border-radius: 0; /* Sin bordes redondeados en el botón */
+    border: 1px solid #ced4da; /* Borde gris claro */
+    background-color: #28a745; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    padding: 0.375rem 0.75rem; /* Espaciado dentro del botón */
+    font-size: 0.875rem; /* Tamaño del texto del botón */
+    margin-left: 1rem; /* Margen izquierdo para empujar el botón hacia la derecha */
+}
+.mensaje-sin-resultados {
+    text-align: center; /* Centra el texto */
+    font-weight: bold;  /* Texto en negrita */
+    font-size: 1.5rem;  /* Tamaño de fuente más grande */
+    color: #000000;     /* Color del texto (puedes ajustar el color según tus necesidades) */
+    margin-top: 20px;   /* Espacio superior */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+/*----------------pagos-------------------*/
+.containerpago {
+    max-width: 800px;
+    margin: 0 auto;
+    background-image: url("http://localhost/web2/img/fondo.jpg");
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.payment-method {
+    margin-bottom: 20px;
+}
+.payment-method h2 {
+    margin-bottom: 10px;
+}
+.payment-method a {
+    display: inline-block;
+    padding: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    background-color: #007bff;
+    transition: background-color 0.3s;
+}
+.payment-method a:hover {
+    background-color: #0056b3;
+}
+.payment-method img {
+    max-width: 50px;
+}
+.text-end {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    margin-top: 20px; /* Ajusta el margen superior si es necesario */
+}
+
+.btn.btn-primary {
+    
+    padding: 10px 20px; /* Ajusta el espaciado interno del botón (opcional) */
+    margin-top: -10px; /* Mueve el botón hacia arriba */
+  
+}
 /* eslilologin.css */
 .container-form {
     display: none;
@@ -57,6 +132,8 @@ main {
 .info3 {
 font-weight: bold;
 }
+
+
 
 .descuento {
     font-size: 2.5rem;
@@ -625,6 +702,35 @@ h1 {
     grid-template-columns: repeat(auto-fit, minmax(280px,280px));
     padding-bottom: 50px;
 }
+.grid2 {
+    display: grid;
+    max-width: 1100px;
+    justify-content: center;
+    margin: auto;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    padding: 20px;
+    border: 2px solid #000; /* Borde negro */
+    background-color: #f9f9f9; /* Fondo claro para mayor contraste */
+}
+
+.grid2 .items {
+    border: 1px solid #ccc; /* Borde claro para los items */
+    padding: 10px;
+    background: #fff; /* Fondo blanco para los items */
+}
+
+.grid2 img {
+    max-width: 100px; /* Ajusta este valor según lo que necesites */
+    max-height: 100px; /* Ajusta este valor según lo que necesites */
+    object-fit: cover; /* Opcional: mantiene la relación de aspecto y cubre el área definida */
+}
+
+.grid2 .info {
+    text-align: center;
+}
+
+
 
 .items {
     background-color: #fff;
@@ -706,5 +812,6 @@ h1 {
     border-radius: 5px;
     transition: all .3s;
 }
+
 
 
